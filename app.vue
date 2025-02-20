@@ -9,7 +9,7 @@ import { useMainStore } from "~/stores/mainStore";
 
 const mainStore = useMainStore();
 
-const [users, posts, comments] = await Promise.all([
+const [users, posts] = await Promise.all([
   $fetch("https://dummyjson.com/users?limit=0"),
   $fetch("https://dummyjson.com/posts?limit=0"),
 ]);
